@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seffyo.kandaapptesting">
+
+    <!-- Allow access to Bluetooth -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MAIN -->
+        <activity
+            android:name=".activities.main.MainActivity"
+            android:launchMode="singleTop" />
+
+        <!-- DISPLAY MSG -->
+        <activity
+            android:name=".activities.displayMessage.DisplayMessageActivity"
+            android:parentActivityName=".activities.main.MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.main.MainActivity" />
+        </activity>
+
+        <!-- NETWORK -->
+        <activity android:name=".activities.network.NetworkActivity" />
+        <activity
+            android:name=".activities.bluetooth.BluetoothActivity"
+            android:label="@string/title_activity_bluetooth"
+            android:parentActivityName=".activities.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.seffyo.kandaapptesting.activities.main.MainActivity" />
+        </activity>
+        <activity android:name=".MainMenuActivity" />
+        <activity
+            android:name=".activities.adapter.adapters.AdapterActivity"
+            android:parentActivityName=".activities.main.MainActivity" />
+        <activity
+            android:name=".activities.fragment.FragmentActivity"
+            android:parentActivityName=".activities.main.MainActivity" />
+        <activity
+            android:name=".activities.settings.SettingsActivity"
+            android:label="SETTINGS" />
+        <activity
+            android:name=".activities.loader.LoaderActivity"
+            android:parentActivityName=".activities.main.MainActivity" />
+        <activity android:name=".activities.androidme.AndroidMeActivity" />
+        <activity android:name=".activities.androidme.AndroidMeMainActivity" />
+        <activity android:name=".activities.networkOkHttp.OkHttpActivity" />
+        <activity android:name=".activities.node.NodeActivity"></activity>
+    </application>
+
+</manifest>

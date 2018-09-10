@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "17334139856",
+    "project_id": "kandaapptesting"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17334139856:android:6d7f0ef66475b55e",
+        "android_client_info": {
+          "package_name": "com.seffyo.kandaapptesting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17334139856-m7nkch98a4om10c15fm669dsae70vdfu.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "17334139856-l3qj0je9hmasn6jslva4nfuci5ugpe1c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.seffyo.kandaapptesting",
+            "certificate_hash": "aeb09f79f03ea03e2a34980f6d17aa3e30940f5a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcnWBGO3tzZdx3anJ9FOtiLCtUj2aG3cA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
